@@ -55,6 +55,7 @@ async function setup() {
     let device;
     try {
         device = await RNBO.createDevice({ context, patcher });
+        
     } catch (err) {
         if (typeof guardrails === "function") {
             guardrails({ error: err });
